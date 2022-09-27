@@ -29,13 +29,6 @@ public class InspectionSpecification implements Specification<Inspection> {
             }else if(root.get(criteria.getKey()).getJavaType() == Integer.class){
                 return builder.greaterThan(root.get(criteria.getKey()), criteria.getValue().toString());
             }
-//            if (criteria.getValue() instanceof LocalDate) {
-//                return builder.greaterThan(root.get(criteria.getKey()), (LocalDate) criteria.getValue());
-//            } else if (criteria.getValue() instanceof LocalTime) {
-//                return builder.greaterThan(root.get(criteria.getKey()), (LocalTime) criteria.getValue());
-//            } else {
-//                return builder.greaterThan(root.get(criteria.getKey()), criteria.getValue().toString());
-//            }
         }
         else if (criteria.getOperation().equalsIgnoreCase("<")) {
             if (root.get(criteria.getKey()).getJavaType() == LocalDate.class) {
@@ -44,13 +37,6 @@ public class InspectionSpecification implements Specification<Inspection> {
             }else if(root.get(criteria.getKey()).getJavaType() == Integer.class){
                 return builder.greaterThan(root.get(criteria.getKey()), criteria.getValue().toString());
             }
-//            if (criteria.getValue() instanceof LocalDate) {
-//                return builder.lessThan(root.get(criteria.getKey()), (LocalDate) criteria.getValue());
-//            } else if (criteria.getValue() instanceof LocalTime) {
-//                return builder.lessThan(root.get(criteria.getKey()), (LocalTime) criteria.getValue());
-//            } else {
-//                return builder.lessThan(root.get(criteria.getKey()), criteria.getValue().toString());
-//            }
         }
         else if (criteria.getOperation().equalsIgnoreCase(":")) {
             if (root.get(criteria.getKey()).getJavaType() == String.class) {
